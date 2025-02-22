@@ -34,26 +34,26 @@
 
   <script>
     function updateCountdown() {
-    const targetDate = new Date(new Date().getFullYear(), 4, 17);
-    const now = new Date();
+      const targetDate = new Date(new Date().getFullYear(), 4, 17);
+      const now = new Date();
 
-    //if (now > targetDate) {
-      //document.write("Congratulations! You are free.");
+      //if (now > targetDate) {
+        //document.write("Congratulations! You are free.");
 
-    const totalSeconds = Math.floor(targetDate - now) / 1000);
-    const totalMinutes = Math.floor(totalSeconds / 60);
-    const totalHours = Math.floor(totalMinutes / 60);
-    const days = totalHours % 24;
-    const minutes = totalMinutes % 60;
-    const seconds = totalSeconds % 60;
+      const totalSeconds = Math.floor(targetDate - now) / 1000);
+      const totalMinutes = Math.floor(totalSeconds / 60);
+      const totalHours = Math.floor(totalMinutes / 60);
+      const days = totalHours % 24;
+      const minutes = totalMinutes % 60;
+      const seconds = totalSeconds % 60;
 
-    document.getElementById("countdown").innerHTML = 
-      `Days: ${days}, Hours: ${hours}, Minutes: ${minutes}, Seconds: ${seconds}`;
-    document.getElementById("totals").innerHTML = 
-      `Total Hours: ${totalHours}, Total Minutes: ${totalMinutes}, Total Seconds: ${totalSeconds}`;
+       document.getElementById("countdown").innerHTML = 
+        `Days: ${days}, Hours: ${hours}, Minutes: ${minutes}, Seconds: ${seconds}`;
+      document.getElementById("totals").innerHTML = 
+        `Total Hours: ${totalHours}, Total Minutes: ${totalMinutes}, Total Seconds: ${totalSeconds}`;
+    }
     updateCountdown();
     setInterval(updateCountdown, 1000); //update every second
-    }
   </script>
 </body>
 </html>
