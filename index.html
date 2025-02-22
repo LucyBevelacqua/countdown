@@ -49,10 +49,12 @@
       const minutes = totalMinutes % 60;
       const seconds = totalSeconds % 60;
 
-       document.getElementById("countdown").innerHTML = 
+      document.getElementById("countdown").innerHTML = 
         `Days: ${days}, Hours: ${hours}, Minutes: ${minutes}, Seconds: ${seconds}`;
       document.getElementById("totals").innerHTML = 
         `Total Hours: ${totalHours}, Total Minutes: ${totalMinutes}, Total Seconds: ${totalSeconds}`;
+      document.getElementById("text").innerHTML = 
+        `Don't give up. On May 17, 2025, it will all be over. You will be free of this horrible school. No matter how bad everything is going, you only have to get up and endure it ${days} more times.`;
     }
     updateCountdown();
     setInterval(updateCountdown, 1000); //update every second
