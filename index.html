@@ -12,14 +12,14 @@
       justify-content: center;
       height: 100vh;
       background-color: crimson;
-      color: pumpkin;
+      color: orange;
       font-family: Chalkduster, fantasy;
       text-align: center;
     }
     .countdown {
       font-size: 2em;
       padding: 20px;
-      background-color: chili;
+      background-color: darkred;
       border-radius: 10px;
     }
     .totals {
@@ -37,10 +37,15 @@
       const targetDate = new Date(new Date().getFullYear(), 4, 17);
       const now = new Date();
 
+      if (now > targetDate) {
+        document.write("Congratulations! You are free.");
+      }
+      
       const totalSeconds = Math.floor((targetDate - now) / 1000);
       const totalMinutes = Math.floor(totalSeconds / 60);
       const totalHours = Math.floor(totalMinutes / 60);
-      const days = totalHours % 24;
+      const days = Math.floor(totalHours / 24);
+      const hours = totalHours % 24;
       const minutes = totalMinutes % 60;
       const seconds = totalSeconds % 60;
 
