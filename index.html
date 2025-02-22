@@ -38,7 +38,7 @@
       const now = new Date();
 
       if (now > targetDate) {
-        document.write("Congratulations! You are free.");
+        targetDate.setFullYear(targetDate.getFullYear() + 1);
       }
       
       const totalSeconds = Math.floor((targetDate - now) / 1000);
