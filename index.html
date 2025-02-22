@@ -11,7 +11,7 @@
       align-items: center;
       justify-content: center;
       height: 100vh;
-      //background-color: crimson;
+      background-color: crimson;
       color: pumpkin;
       font-family: Chalkduster, fantasy;
       text-align: center;
@@ -19,7 +19,7 @@
     .countdown {
       font-size: 2em;
       padding: 20px;
-      //background-color: chili;
+      background-color: chili;
       border-radius: 10px;
     }
     .totals {
@@ -33,7 +33,7 @@
   <div class="totals" id="totals"></div>
 
   <script>
-    function updateCountdown()
+    function updateCountdown() {
     const targetDate = new Date(new Date().getFullYear(), 4, 17)
     const now = new Date();
 
@@ -50,10 +50,11 @@
 
     document.getElementById("countdown").innerHTML = 
       `Days: ${days}, Hours: ${hours}, Minutes: ${minutes}, Seconds: ${seconds}`;
-    document.getElementById("countdown").innerHTML = 
+    document.getElementById("totals").innerHTML = 
       `Total Hours: ${totalHours}, Total Minutes: ${totalMinutes}, Total Seconds: ${totalSeconds}`;
     updateCountdown();
     setInterval(updateCountdown, 1000); //update every second
+    }
   </script>
 </body>
 </html>
