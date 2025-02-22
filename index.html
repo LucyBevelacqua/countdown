@@ -13,6 +13,7 @@
       height: 100vh;
       background-color: crimson;
       color: orange;
+      font-family: Chalkduster, fantasy;
       font-family: Times, Times New Roman, serif;
       text-align: center;
     }
@@ -40,7 +41,7 @@
       if (now > targetDate) {
         targetDate.setFullYear(targetDate.getFullYear() + 1);
       }
-      
+
       const totalSeconds = Math.floor((targetDate - now) / 1000);
       const totalMinutes = Math.floor(totalSeconds / 60);
       const totalHours = Math.floor(totalMinutes / 60);
@@ -49,7 +50,7 @@
       const minutes = totalMinutes % 60;
       const seconds = totalSeconds % 60;
 
-      document.getElementById("countdown").innerHTML = 
+       document.getElementById("countdown").innerHTML = 
         `Days: ${days}, Hours: ${hours}, Minutes: ${minutes}, Seconds: ${seconds}`;
       document.getElementById("totals").innerHTML = 
         `Total Hours: ${totalHours}, Total Minutes: ${totalMinutes}, Total Seconds: ${totalSeconds}`;
