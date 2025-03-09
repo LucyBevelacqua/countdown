@@ -32,7 +32,8 @@
 <body>
   <div class="countdown" id="countdown"></div>
   <div class="totals" id="totals"></div>
-
+  <h2>Countdown To Freedom</h2><br>
+  <h2>How long until I get to escape?</h2><br>
   <script>
     function updateCountdown() {
       const targetDate = new Date(new Date().getFullYear(), 4, 17);
@@ -49,8 +50,8 @@
       const hours = totalHours % 24;
       const minutes = totalMinutes % 60;
       const seconds = totalSeconds % 60;
-
-       document.getElementById("countdown").innerHTML = 
+        
+      document.getElementById("countdown").innerHTML = 
         `Days: ${days}, Hours: ${hours}, Minutes: ${minutes}, Seconds: ${seconds}`;
       document.getElementById("totals").innerHTML = 
         `Total Hours: ${totalHours}, Total Minutes: ${totalMinutes}, Total Seconds: ${totalSeconds}`;
